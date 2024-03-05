@@ -26,6 +26,7 @@ console.log(priceTiket);
 
 // SCONTO
 // calcolare sconto del 20% ai minorenni
+// calcolare sconto del 40% agli over 65
 let discount;
 if (userAge < 18) {
     discount = priceTiket * 20 / 100;
@@ -34,15 +35,15 @@ if (userAge < 18) {
 }else {
     discount = 0;
 }
-console.log(discount);
-
-
-let finalPrice = (priceTiket - discount);
-console.log(finalPrice);
-
-// calcolare sconto del 40% agli over 65
 
 
 // STAMPARE
-// .....
+// stampare la cifra scontata
+let finalPrice = `Il tuo biglietto è di: ${priceTiket - discount} €`;
+console.log(finalPrice);
+
+document.getElementById('final-message').innerHTML =  finalPrice;
+
+
+
 
